@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gerenciador de Estoque</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Tela inicial -->
+    <section id="welcome-screen" class="screen active-screen">
+        <div class="welcome-box">
+            <h1 class="welcome-title">Gerencie seu estoque com praticidade!</h1>
+            <p class="welcome-subtitle">Controle, atualize e acompanhe seus produtos de forma simples e eficiente.</p>
+            <button id="manage-stock-btn" class="btn-primary">Iniciar Gerenciamento</button>
+
+            <div id="stock-options">
+                <button id="btn-create" class="btn-secondary">Criar Produto</button>
+                <button id="btn-list" class="btn-secondary">Listar Produtos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Criar produto -->
+    <section id="create-product" class="screen">
+        <h2 id="form-title">Criar Produto</h2>
+        <form id="product-form">
+            <input type="hidden" id="product-id" />
+            <input type="text" id="name" placeholder="Nome do Produto" required />
+            <input type="text" id="description" placeholder="Descrição" required />
+            <input type="number" id="price" placeholder="Preço" required />
+            <button type="submit" id="save-button">Adicionar Produto</button>
+            <button type="button" id="cancel-create">Cancelar</button>
+        </form>
+    </section>
+
+    <!-- Listar produtos -->
+    <section id="list-products" class="screen">
+        <h2>Lista de Produtos</h2>
+        <div id="product-list">
+            <!-- Exemplo estático para garantir a estrutura correta -->
+            <div class="product">
+                <span class="product-title">Produto Exemplo</span>
+                <span class="product-description">Descrição do produto exemplo</span>
+                <span class="product-price">R$ 99,99</span>
+            </div>
+        </div>
+        <div id="selected-product-actions" style="display:none; margin-top:20px;">
+            <button id="btn-update" class="btn-secondary">Atualizar Produto</button>
+            <button id="btn-delete" class="btn-danger">Excluir Produto</button>
+            <button id="btn-cancel-selection">Cancelar</button>
+        </div>
+        <button id="back-to-menu" class="btn-secondary" style="margin-top: 20px;">Voltar ao Menu</button>
+    </section>
+
+</div>
+
+<script src="script.js" defer></script></body>
+</html>

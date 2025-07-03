@@ -1,0 +1,216 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #F4F6F8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #E0E3E7;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(34, 58, 94, 0.10);
+}
+
+h1, h2 {
+  color: #223A5E;
+  margin-bottom: 20px;
+}
+
+#welcome-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #223A5E, #4B6584);
+  border-radius: 10px;
+  text-align: center;
+  min-height: 500px;
+  color: white;
+}
+
+.welcome-box {
+  max-width: 600px;
+  background: rgba(244, 246, 248, 0.95);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(34, 58, 94, 0.15);
+  color: #223A5E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.welcome-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #223A5E;
+  margin-bottom: 10px;
+}
+
+.welcome-subtitle {
+  font-size: 1.2em;
+  color: #4B6584;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active-screen {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-weight: bold;
+  margin: 0;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1em;
+  color: white;
+  max-width: 180px;
+  flex-grow: 1;
+  min-width: 140px;
+}
+
+.btn-primary {
+  background-color: #223A5E;
+}
+.btn-primary:hover {
+  background-color: #1A2940;
+}
+
+.btn-secondary {
+  background-color: #4B6584;
+}
+.btn-secondary:hover {
+  background-color: #34495E;
+}
+
+.btn-danger {
+  background-color: #C62828;
+}
+.btn-danger:hover {
+  background-color: #8B1F1F;
+}
+
+#product-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 15px;
+}
+
+.product {
+  padding: 15px;
+  background-color: #F4F6F8;
+  border: 1px solid #B0BEC5;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s, border-color 0.2s;
+  color: #223A5E;
+  font-weight: 600;
+}
+.product:hover {
+  background-color: #E0E3E7;
+  border-color: #4B6584;
+}
+.product.selected {
+  background-color: #4B6584;
+  border-color: #223A5E;
+  color: white;
+}
+/* Torna a descrição branca quando o produto está selecionado */
+.product.selected .product-description {
+  color: #fff;
+}
+
+#product-form input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #B0BEC5;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: #223A5E;
+  background: #F4F6F8;
+  transition: border-color 0.3s;
+}
+#product-form input:focus {
+  border-color: #4B6584;
+  outline: none;
+}
+
+/* Ações do produto selecionado: lado a lado */
+#selected-product-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botão atualizar: verde escuro */
+#btn-update {
+  background-color: #2E7D32;
+  color: #fff;
+}
+#btn-update:hover {
+  background-color: #205723;
+}
+
+/* Botão cancelar: laranja queimado */
+#btn-cancel-selection {
+  background-color: #F57C00;
+  color: #fff;
+}
+#btn-cancel-selection:hover {
+  background-color: #BB4D00;
+}
+
+/* Botões do formulário */
+#save-button {
+  background-color: #2E7D32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+#save-button:hover {
+  background-color: #205723;
+}
+
+#cancel-create {
+  background-color: #C62828;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+#cancel-create:hover {
+  background-color: #8B1F1F;
+}
+
+/* Container dos botões criar/listar no welcome */
+#stock-options {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: center;
+}

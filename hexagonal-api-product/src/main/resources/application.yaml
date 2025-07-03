@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: hexagonal-product-api
+  flyway:
+    baselineOnMigrate: true
+    locations: classpath:db/migration-local,classpath:db/data-local
+    enabled: false
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 10
+      idle-timeout: 10000
+    url: ${BMS_DATABASE_URL:jdbc:postgresql://localhost:5432/product_db}
+    username: ${BMS_DATABASE_USERNAME:product_user}
+    password: ${BMS_DATABASE_PASSWORD:secret}
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
